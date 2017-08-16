@@ -1,4 +1,10 @@
 <div class="jumbotron">
+  <div>
+      <h1><span style="font-size:1.2em;font-weight: 100;">Open</span><span style="font-size:1.2em;font-weight: 400;">Gazettes</span></h1>
+  </div>
+    <p class="context sample-searches" style="font-weight: normal">
+        Now you can use official public notices to gather intelligence on business activity in Africa
+      </p>
   <div class="search-area">
     <form class="form-horizontal actions" role="search" ng-submit="searchDocuments(form)">
       <div class="input-group">
@@ -21,7 +27,7 @@
       </p>
     </form>
   </div>
-    <h2 class="page-section__h2" style="font-weight: 700; color: rgba(0,0,0,0.6); font-size: 1.2rem; text-transform: capitalize">Filter by Jurisdiction</h2>
+    <h2 class="page-section__h2" style="font-weight: 700; color: rgba(0,0,0,0.6); font-size: 1.2rem; text-transform: initial">Filter by Jurisdiction</h2>
     <div class="list-group">
         <a ng-repeat="collection in collections.results track by collection.id"
            href="/documents?filter:collection_id={{::collection.id}}"
@@ -35,14 +41,14 @@
       </div>
     <ul class="flag-group" >
         <li class="flag-item-container" ng-repeat="collection in collectionData">
-            <a class="flag-item__country-name" href="{{collection.url}}">
-                <div class="flag-item" style="background-image: url(https://raw.githubusercontent.com/hjnilsson/country-flags/master/png100px/{{ collection.country_code}}.png)"></div>
+            <a class="flag-item__country-name space" href="{{collection.url}}">
+                <div class="flag-item" style="margin-bottom:10px;background-image: url(https://raw.githubusercontent.com/hjnilsson/country-flags/master/png100px/{{ collection.country_code}}.png)"></div>
                 {{ collection.country }}</a>
         </li>
 </div>
 
 <div class="home screen">
-  <div class="row">
+  <div class="row" style="margin-bottom: 35px;">
     <div class="col-md-4 feature">
       <h2> <i class="fa fa-fw fa-file-text"></i>
         Search documents
@@ -92,9 +98,9 @@
     </div>
   </div>
   <!-- Timely Data -->
-  <div class="row row-dark">
-    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-      <div class="col-sm-7 col-md-8" style="padding: 5px 0;" >
+  <div class="row row-dark"  >
+    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" style="margin-top: 5px;">
+      <div class="col-sm-7 col-md-8">
         <p><strong>Is timely data about corporations critical to your business?</strong> Government gazettes are the notice of record for many key events. For example, a notice about company liquidation will appear in the gazette weeks before appearing on the company register, and will contain information you can’t find elsewhere.</p>
       </div>
       <div class="col-sm-5 col-md-4 call-to-action-section__button">
@@ -118,7 +124,7 @@
         </ol>
 
         <!-- Wrapper for slides -->
-        <div class="carousel-inner">
+        <div class="carousel-inner" style="margin-top: 50px;padding-bottom: -100px;margin-bottom: -100px;">
 
 
           <!-- Left and right controls -->
@@ -148,7 +154,7 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-          <div class="item active">
+          <div class="item">
             <div class>
               <div class="col-sm-7 col-md-7 use-cases__illustration">
                 <img src="/static/images/bank_use_case.png" alt="">
@@ -165,7 +171,7 @@
               </div>
             </div>
           </div>
-            <div class="item">
+            <div class="item  active">
             <div class>
               <div class="col-sm-5 col-md-5">
                 <h3 class="use-cases__h3">Journalist Use Case</h3>

@@ -6,21 +6,17 @@ $light-grey: #ededea;
 $darker-grey: #213c4f;
 
 .jumbotron {
-    margin-top: -20px;
+    margin-top: -30px;
     min-height: 40vh;
-    background-color: #fff;
-    background-image: url(/static/images/europe_asia.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #ededea;
     background-position: 50% 50%;
     color: #000;
-
     text-align: center;
     padding-bottom: 2em;
 
     h1 {
         // text-transform: uppercase;
-        margin-top: 10vh;
+        margin-top: 0vh;
         font-size: 4em;
         font-weight: bold;
     }
@@ -41,7 +37,8 @@ $darker-grey: #213c4f;
     .sample-searches {
         margin-top: .7em;
         font-size: 1em;
-        font-weight: bold;
+		font-weight: bold;
+		text-align: center;
     }
 	.flag-group {
 		text-transform: capitalize;
@@ -50,7 +47,7 @@ $darker-grey: #213c4f;
 		li {
             list-style-type: none;
             display: inline-block;
-            margin: 10px;
+            margin: -10px 0 20px;
             vertical-align: top;
             cursor: pointer;
 		}
@@ -62,7 +59,10 @@ $darker-grey: #213c4f;
             background-size: cover;
             background-position: center;
             box-shadow: 0 0 4px rgba(0,0,0,0.2);
-          }
+		  }
+		.space {
+			padding-left: 50px;
+		}
 	}
 }
 
@@ -82,11 +82,13 @@ $darker-grey: #213c4f;
         }
 
         .actions {
-            margin-top: 1.5em;
+			margin-top: 1.5em;
+			margin-top: 1.5em;
         }
 
         .context {
-            margin-top: 0.5em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
             font-size: 0.8em;
         }
 
@@ -267,16 +269,18 @@ footer {
 		}
 	}
 	.attributions {
-		padding: 15px;
+		padding: 15px 0px;
 		background: $grey;
 		.mentions {
 			float: right;
 			img {
+				opacity: 0.5;
 				height: 30px;
 				margin: 10px 20px;
 			}
 			span {
-				margin: 15px 5px 15px 10px;
+				opacity: 0.5;
+				margin: 15px 3px 15px 3px;
 			}
 			.mention {
 				float: right;
