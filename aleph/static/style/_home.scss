@@ -22,27 +22,27 @@ $darker-grey: #213c4f;
 
     p.teaser {
         // text-transform: uppercase;
-        font-size: 2em;
-        margin-bottom: 0;
-        font-weight: normal;
-        padding-bottom: 0;
+		font-size: 2em;
+		margin-bottom: 0;
+		font-weight: normal;
+		padding-bottom: 0;
     }
 
     .search-area {
-        max-width: 500px;
-        margin: 2em auto 0 auto;
+		max-width: 500px;
+		margin: 2em auto 0 auto;
     }
 
     .sample-searches {
-	    margin-top: .7em;
-	    font-size: 1em;
-	    font-weight: bold;
-	    text-align: center;
+		margin-top: .7em;
+		font-size: 1em;
+		font-weight: bold;
+		text-align: center;
     }
 	.flag-group {
 		text-transform: capitalize;
 		margin: 0 auto;
-    		display: table;
+		display: table;
 		li {
 			list-style-type: none;
 			display: inline-block;
@@ -52,12 +52,12 @@ $darker-grey: #213c4f;
 		}
 		.flag-item {
 			width: 60px;
-            		height: 60px;
-            		margin: 0 auto;
-            		border-radius: 50%;
-            		background-size: cover;
-            		background-position: center;
-            		box-shadow: 0 0 4px rgba(0,0,0,0.2);
+			height: 60px;
+			margin: 0 auto;
+			border-radius: 50%;
+			background-size: cover;
+			background-position: center;
+			box-shadow: 0 0 4px rgba(0,0,0,0.2);
 		  }
 		.space {
 			padding-left: 50px;
@@ -68,12 +68,12 @@ $darker-grey: #213c4f;
 
 .home {
     .feature {
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
 
         h2 {
             //margin-top: 1em;
-            margin-bottom: 0.5em;
+			margin-bottom: 0.5em;
         }
 
         p {
@@ -81,14 +81,14 @@ $darker-grey: #213c4f;
         }
 
         .actions {
-		margin-top: 1.5em;
-		margin-top: 1.5em;
+			margin-top: 1.5em;
+			margin-top: 1.5em;
         }
 
         .context {
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
-            	font-size: 0.8em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+			font-size: 0.8em;
         }
 
     }
@@ -96,14 +96,14 @@ $darker-grey: #213c4f;
 	.carousel {
 		padding: 0 0 60px;
 		p {
-            		font-size: 15px;
+			font-size: 15px;
         }
 		.use-cases__illustration {
-				padding: 30px;
+			padding: 30px;
 			img {
 				width: 60%;
 				display: block;
-    				margin: auto;
+				margin: auto;
 			}
 		}
 		.carousel-inner {
@@ -130,10 +130,10 @@ $darker-grey: #213c4f;
 		font-size: 17px;
 		padding: 20px 0;
 		.call-to-action-section__button {
-           		margin-top: 6%;
-            		text-align: right;
-           		font-size: 16px;
-           		min-height: 60px;
+			margin-top: 6%;
+			text-align: right;
+			font-size: 16px;
+			min-height: 60px;
 		}
 		.button--large {
 			padding: 16px 35px;
@@ -147,8 +147,8 @@ $darker-grey: #213c4f;
 
 	#newsCarousel {
 		.item {
-		height: 600px;
-        	overflow-y: scroll;
+			height: 600px;
+			overflow-y: scroll;
 		}
 	}
 
@@ -215,8 +215,8 @@ $darker-grey: #213c4f;
             -moz-transition: background-color 0.2s ease-out;
             -o-transition: background-color 0.2s ease-out;
 	        &:hover {
-		        background-color: rgba(0, 0, 0, 0.10);
-                	cursor: pointer;
+				background-color: rgba(0, 0, 0, 0.10);
+				cursor: pointer;
 		    }
 	        h2 {
 			    padding: 10px 10px 0 10px;
@@ -256,8 +256,8 @@ footer {
 		h3 {
 			padding-right: 20px;
 			color: $maroon;
-            		text-transform: capitalize;
-            		white-space: nowrap;
+            text-transform: capitalize;
+            white-space: nowrap;
 			margin-left: 40px;
 		}
 		a{
