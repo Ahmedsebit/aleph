@@ -51,13 +51,13 @@ $darker-grey: #213c4f;
 			cursor: pointer;
 		}
 		.flag-item {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto;
-            border-radius: 50%;
-            background-size: cover;
-            background-position: center;
-            box-shadow: 0 0 4px rgba(0,0,0,0.2);
+			width: 60px;
+            		height: 60px;
+            		margin: 0 auto;
+            		border-radius: 50%;
+            		background-size: cover;
+            		background-position: center;
+            		box-shadow: 0 0 4px rgba(0,0,0,0.2);
 		  }
 		.space {
 			padding-left: 50px;
@@ -81,14 +81,14 @@ $darker-grey: #213c4f;
         }
 
         .actions {
-			margin-top: 1.5em;
-			margin-top: 1.5em;
+		margin-top: 1.5em;
+		margin-top: 1.5em;
         }
 
         .context {
-			margin-top: 0.5em;
-			margin-bottom: 0.5em;
-            font-size: 0.8em;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+            	font-size: 0.8em;
         }
 
     }
@@ -96,19 +96,19 @@ $darker-grey: #213c4f;
 	.carousel {
 		padding: 0 0 60px;
 		p {
-            font-size: 15px;
+            		font-size: 15px;
         }
 		.use-cases__illustration {
-			padding: 30px;
+				padding: 30px;
 			img {
 				width: 60%;
 				display: block;
-    			margin: auto;
+    				margin: auto;
 			}
 		}
 		.carousel-inner {
 			height: 550px;
-            width: inherit;
+			width: inherit;
 			.carousel-control {
 				z-index: 5;
 				&.right-ctrl {
@@ -121,8 +121,8 @@ $darker-grey: #213c4f;
 	}
 
 	.dark-row, .dark-row i{
-        background: $grey;
-        color: #fff;
+        	background: $grey;
+        	color: #fff;
 	}
 	.row-dark{
 		background-color: $maroon;
@@ -130,10 +130,10 @@ $darker-grey: #213c4f;
 		font-size: 17px;
 		padding: 20px 0;
 		.call-to-action-section__button {
-           margin-top: 6%;
-            text-align: right;
-           font-size: 16px;
-           min-height: 60px;
+           		margin-top: 6%;
+            		text-align: right;
+           		font-size: 16px;
+           		min-height: 60px;
 		}
 		.button--large {
 			padding: 16px 35px;
@@ -225,7 +225,7 @@ $darker-grey: #213c4f;
 			    word-wrap: break-word;
 		    }
 	        p{
-				padding: 5px 10px 0 10px;
+			padding: 5px 10px 0 10px;
 			}
 	        .date {
 			    margin-left: 10px;
@@ -256,8 +256,8 @@ footer {
 		h3 {
 			padding-right: 20px;
 			color: $maroon;
-            text-transform: capitalize;
-            white-space: nowrap;
+            		text-transform: capitalize;
+            		white-space: nowrap;
 			margin-left: 40px;
 		}
 		a{
