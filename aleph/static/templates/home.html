@@ -1,1 +1,304 @@
-s
+<div class="jumbotron">
+  <div>
+      <h1><span style="font-size:1.2em;font-weight: 100;">Open</span><span style="font-size:1.2em;font-weight: 400;">Gazettes</span></h1>
+  </div>
+    <p class="context sample-searches" style="font-weight: normal">
+        Now you can use official public notices to gather intelligence on business activity in Africa
+      </p>
+  <div class="search-area">
+    <form class="form-horizontal actions" role="search" ng-submit="searchDocuments(form)">
+      <div class="input-group">
+        <input type="text" class="form-control" autofocus ng-model="documentsQuery.q">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </span>
+      </div>
+      <p class="context sample-searches">
+        Examples:
+        <span ng-repeat="sample in metadata.app.samples">
+          <span ng-if="$last">or</span>
+          <a href="/documents?q={{::sample}}">{{::sample}}</a>
+          <span ng-if="!$last">,</span>
+        </span>
+        ,
+          or
+        <a href="/documents/sources">browse sources</a>
+        .
+      </p>
+    </form>
+  </div>
+    <h2 class="page-section__h2" style="font-weight: 700; color: rgba(0,0,0,0.6); font-size: 1.2rem; text-transform: initial">Filter by Jurisdiction</h2>
+    <div class="list-group">
+        <a ng-repeat="collection in collections.results track by collection.id"
+           href="/documents?filter:collection_id={{::collection.id}}"
+           class="list-group-item">
+          <span class="badge" ng-if="collection.doc_count">
+            {{::collection.doc_count | number}}
+          </span>
+          <privacy-icon subject="collection"></privacy-icon>
+          <strong>{{::collection.label}}</strong>
+        </a>
+      </div>
+    <ul class="flag-group" >
+        <li class="flag-item-container" ng-repeat="collection in collectionData">
+            <a class="flag-item__country-name space" href="{{collection.url}}">
+                <div class="flag-item" style="margin-bottom:10px;background-image: url(https://raw.githubusercontent.com/hjnilsson/country-flags/master/png100px/{{ collection.country_code}}.png)"></div>
+                {{ collection.country }}</a>
+        </li>
+</div>
+
+<div class="home screen">
+  <div class="row" style="margin-bottom: 35px;">
+    <div class="col-md-4 feature">
+      <h2> <i class="fa fa-fw fa-file-text"></i>
+        Search documents
+      </h2>
+
+      <p>
+        {{metadata.app.title}} lets you search across
+        <a href="/documents/sources">
+          {{::statistics.collections_count | number}} African countries' National Gazettes
+        </a>
+        from {{metadata.app.opengazettes_url}}
+      </p>
+    </div>
+
+    <div class="col-md-4 feature" ng-if="::!authz.logged_in()">
+      <h2> <i class="fa fa-bell"></i>
+        E-Mail Alerts
+      </h2>
+      <p>
+        As new material gets added, you can stay informed about
+        any additional matches for your previous searches by
+        setting up e-mail alerts.
+      </p>
+
+    </div>
+
+    <div class="col-md-4 feature">
+      <h2>
+        <i class="fa fa-fw fa-users"></i>
+        Persons of interest
+      </h2>
+      <p>
+        Gazettes are cross-referenced with persons and companies by ID and CIPC numbers respectively.
+      </p>
+      <form class="form-horizontal actions" role="search" ng-submit="searchEntities(form)">
+        <div class="input-group">
+          <input type="text" class="form-control" autofocus ng-model="entitiesQuery.q"
+            placeholder="{{::statistics.entities_count | number}} people and companies">
+          <span class="input-group-btn">
+            <button class="btn btn-primary" type="submit">Search</button>
+          </span>
+        </div>
+        <p class="context">
+          <a href="/datasets">Browse databases</a>.
+        </p>
+      </form>
+    </div>
+  </div>
+  <!-- Timely Data -->
+  <div class="row row-dark"  >
+    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" style="margin-top: 5px;">
+      <div class="col-sm-7 col-md-8">
+        <p><strong>Is timely data about corporations critical to your business?</strong> Government gazettes are the notice of record for many key events. For example, a notice about company liquidation will appear in the gazette weeks before appearing on the company register, and will contain information you can’t find elsewhere.</p>
+      </div>
+      <div class="col-sm-5 col-md-4 call-to-action-section__button">
+        <a class="button--large" href="/plans">Tell me more</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- News Slide -->
+  <div class="row dark-row">
+    <div style="text-align: center;">
+      <h2> <i class="fa fa-fw fa-newspaper-o"></i>
+        What's Happening
+      </h2>
+    </div>
+      <div id="newsCarousel" class="carousel slide" ng-non-bindable data-interval="false" data-ride="carousel">
+
+      <!-- Indicators -->
+        <ol class="carousel-indicators">
+
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" style="margin-top: 50px;padding-bottom: -100px;margin-bottom: -100px;">
+
+
+          <!-- Left and right controls -->
+          <a class="carousel-control" data-target="#newsCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right-ctrl carousel-control" data-target="#newsCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Use case -->
+    <div class="row">
+      <div id="useCaseCarousel" class="carousel slide" data-interval="false"
+           ng-non-bindable style="width:100%;">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#useCaseCarousel" data-slide-to="0"
+              class="active"></li>
+          <li data-target="#useCaseCarousel" data-slide-to="1"></li>
+          <li data-target="#useCaseCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item">
+            <div class>
+              <div class="col-sm-7 col-md-7 use-cases__illustration">
+                <img src="/static/images/bank_use_case.png" alt="">
+              </div>
+              <div class="col-sm-5 col-md-5">
+                <h3 class="use-cases__h3">Bank Use Case</h3>
+                <h2 class="use-cases__h2">Credit scoring signals</h2>
+                <p>Company-related gazette notices are essential signals in credit, notifying of both major credit events (winding-up notices, creditors meetings, liquidations, mergers etc) and minor ones (filing of annual reports, changes in share capital, changes in registered address). We can supply continually updated feeds of gazette notices via the OpenCorporates API, or regularly updated dumps via SFTP.</p>
+                <br/>
+                <p>
+                  <a class="button--small" href="/contact" tabindex="-1">
+                  Contact Us &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+            <div class="item  active">
+            <div class>
+              <div class="col-sm-5 col-md-5">
+                <h3 class="use-cases__h3">Journalist Use Case</h3>
+                <h2 class="use-cases__h2">Investigations</h2>
+                <p>Gazette notices contain subtle and critical information for investigators, information that is not available at any other public source, including references to shareholders, directors, addresses, and professional advisors (e.g. auditors, lawyers). OpenGazettes free-text search allows millions of gazette notices across multiple jurisdictions to be searched simultaneously in seconds.</p>
+                <br/>
+                <p>
+                  <a class="button--small" href="/contact" tabindex="-1">
+                  Contact Us &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </p>
+              </div>
+              <div class="col-sm-7 col-md-7 use-cases__illustration">
+                <img src="/static/images/journalist_use_case.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class>
+              <div class="col-sm-7 col-md-7 use-cases__illustration">
+                <img src="/static/images/company_use_case.png" alt="">
+              </div>
+              <div class="col-sm-5 col-md-5">
+                <h3 class="use-cases__h3">Company Use Case</h3>
+                <h2 class="use-cases__h2">Onboarding</h2>
+                <p>Gazettes notices are critical when on boarding new clients, as they contain important information linked to the legal entities to which they refer – information that is typically not in company registers, including previous liquidation events, and KYC signals. The data in OpenGazettes can be seemlessly integrated into your onboarding process via the powerful OpenCorporates API.</p>
+                <br/>
+                <p>
+                  <a class="button--small" href="/contact" tabindex="-1">
+                  Contact Us &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left-ctrl carousel-control" data-target="#useCaseCarousel"
+           data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right-ctrl carousel-control" data-target="#useCaseCarousel"
+           data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+</div>
+<script>
+  var spreadsheetID = "1SN02GD7b4d2dqrbgfrWE2bclSorXYF5E6UqhNFjaWig";
+  var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+  var max_title_len = 80;
+  var max_description_len = 150;
+  $.getJSON(url, function(data) {
+    var entry = data.feed.entry;
+    var news_set_index = 0;
+    var newsCarousel = $('#newsCarousel');
+    var carouselInner = newsCarousel.children('.carousel-inner');
+    var carouselIndicator = newsCarousel.children('.carousel-indicators');
+    var news_row = '';
+    $(entry).each(function(index) {
+      // Columns: Title, Descriptions, Publish Date, Author Name, Image URL, Story URL.
+      if (index % 4 === 0) {
+        var active = "";
+        if (news_set_index === 0) {
+          active = "active";
+        } else {
+          active = "";
+        }
+        // Create a new news set div
+        carouselInner.append(
+        '<div id="news-set-' + news_set_index + '" class="item ' + active + '"></div>');
+        // Create a new indicator for the new news-set
+        carouselIndicator.append(
+        '<li data-target="#newsCarousel" data-slide-to="' + news_set_index +
+        '" class="' + active + '"></li>');
+        // Finally increment the news-set index
+        news_set_index += 1;
+      }
+      var newsSet = carouselInner.children('#news-set-' + (news_set_index - 1));
+      var title = this.gsx$title.$t;
+      var description = this.gsx$descriptions.$t;
+      var story_url = this.gsx$storyurl.$t;
+      var author_name = this.gsx$authorname.$t;
+      var publish_date = this.gsx$publishdate.$t;
+
+
+
+      if (title.length > max_title_len) {
+          title = title.substring(0,max_title_len) + "...";
+      }
+      if (description.length > max_description_len) {
+          description= description.substring(0,max_description_len) + "...";
+      }
+      var end = false;
+      if (entry.length == index + 1 ){
+          end = true;
+      }
+      var new_news_row = '';
+      var end_news_row = '';
+      if (index % 2 === 0) {
+          news_row = '';
+          new_news_row = '<div class="col-md-12">';
+          end_news_row = '';
+      } else {
+          new_news_row = '';
+          end_news_row = '</div>';
+          end = true;
+      }
+      news_row += new_news_row +
+          '<a href="' + story_url +'"><div class="col-md-6 news-item">'
+          + '<h2>' + title + '</h2>'
+          + '<div class="date">' + publish_date + '</div>'
+          + '<p>' + description + '</p>'
+          + '</div></a>' + end_news_row;
+      if (end) {
+          newsSet.append(news_row);
+      }
+    });
+  });
+</script>
+<style>
+
+</style>
+
+
+
