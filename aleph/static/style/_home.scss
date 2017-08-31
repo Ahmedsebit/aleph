@@ -7,7 +7,7 @@ $darker-grey: #213c4f;
 
 .jumbotron {
     margin-top: -30px;
-	min-height: 40vh;
+    min-height: 40vh;
     background-color: #ededea;
     color: #000;
     text-align: center;
@@ -36,15 +36,15 @@ $darker-grey: #213c4f;
     .sample-searches {
         margin-top: .7em;
         font-size: 1em;
-		font-weight: bold;
-		text-align: center;
+	font-weight: bold;
+	text-align: center;
     }
 	.flag-group {
 		text-transform: capitalize;
 		margin: 0 auto;
-    	display: table;
+    		display: table;
 		li {
-            list-style-type: none;
+            	   list-style-type: none;
             display: inline-block;
             margin: -10px 0 20px;
             vertical-align: top;
@@ -147,9 +147,8 @@ $darker-grey: #213c4f;
 
 	#newsCarousel {
 		.item {
-
 		height: 600px;
-        overflow-y: scroll;
+        	overflow-y: scroll;
 		}
 	}
 
@@ -217,7 +216,7 @@ $darker-grey: #213c4f;
             -o-transition: background-color 0.2s ease-out;
 	        &:hover {
 		        background-color: rgba(0, 0, 0, 0.10);
-                cursor: pointer;
+                	cursor: pointer;
 		    }
 	        h2 {
 			    padding: 10px 10px 0 10px;
