@@ -42,7 +42,7 @@ $darker-grey: #213c4f;
 	.flag-group {
 		text-transform: capitalize;
 		margin: 0 auto;
-		display: table;
+    display: table;
 		li {
 			list-style-type: none;
 			display: inline-block;
@@ -68,12 +68,12 @@ $darker-grey: #213c4f;
 
 .home {
     .feature {
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
 
         h2 {
             //margin-top: 1em;
-			margin-bottom: 0.5em;
+            margin-bottom: 0.5em;
         }
 
         p {
@@ -96,7 +96,7 @@ $darker-grey: #213c4f;
 	.carousel {
 		padding: 0 0 60px;
 		p {
-			font-size: 15px;
+            font-size: 15px;
         }
 		.use-cases__illustration {
 			padding: 30px;
@@ -108,7 +108,7 @@ $darker-grey: #213c4f;
 		}
 		.carousel-inner {
 			height: 550px;
-			width: inherit;
+            width: inherit;
 			.carousel-control {
 				z-index: 5;
 				&.right-ctrl {
@@ -121,8 +121,8 @@ $darker-grey: #213c4f;
 	}
 
 	.dark-row, .dark-row i{
-		background: $grey;
-		color: #fff;
+        background: $grey;
+        color: #fff;
 	}
 	.row-dark{
 		background-color: $maroon;
@@ -130,10 +130,10 @@ $darker-grey: #213c4f;
 		font-size: 17px;
 		padding: 20px 0;
 		.call-to-action-section__button {
-			margin-top: 6%;
-			text-align: right;
-			font-size: 16px;
-			min-height: 60px;
+        margin-top: 6%;
+        text-align: right;
+        font-size: 16px;
+        min-height: 60px;
 		}
 		.button--large {
 			padding: 16px 35px;
@@ -215,8 +215,8 @@ $darker-grey: #213c4f;
             -moz-transition: background-color 0.2s ease-out;
             -o-transition: background-color 0.2s ease-out;
 	        &:hover {
-				background-color: rgba(0, 0, 0, 0.10);
-				cursor: pointer;
+                background-color: rgba(0, 0, 0, 0.10);
+            cursor: pointer;
 		    }
 	        h2 {
 			    padding: 10px 10px 0 10px;
@@ -225,7 +225,7 @@ $darker-grey: #213c4f;
 			    word-wrap: break-word;
 		    }
 	        p{
-			padding: 5px 10px 0 10px;
+                padding: 5px 10px 0 10px;
 			}
 	        .date {
 			    margin-left: 10px;
