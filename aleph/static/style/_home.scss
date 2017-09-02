@@ -215,8 +215,8 @@ $darker-grey: #213c4f;
             -moz-transition: background-color 0.2s ease-out;
             -o-transition: background-color 0.2s ease-out;
 	        &:hover {
-                background-color: rgba(0, 0, 0, 0.10);
-            cursor: pointer;
+		        background-color: rgba(0, 0, 0, 0.10);
+                cursor: pointer;
 		    }
 	        h2 {
 			    padding: 10px 10px 0 10px;
@@ -225,7 +225,7 @@ $darker-grey: #213c4f;
 			    word-wrap: break-word;
 		    }
 	        p{
-                padding: 5px 10px 0 10px;
+				padding: 5px 10px 0 10px;
 			}
 	        .date {
 			    margin-left: 10px;
