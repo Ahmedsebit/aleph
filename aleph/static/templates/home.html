@@ -42,7 +42,7 @@
     <ul class="flag-group" >
         <li class="flag-item-container" ng-repeat="collection in collectionData">
             <a class="flag-item__country-name space" href="{{collection.url}}">
-                <div class="flag-item" style="margin-bottom:10px;background-image: url(https://raw.githubusercontent.com/hjnilsson/country-flags/master/png100px/{{ collection.country_code}}.png)"></div>
+                <div class="flag-item flag-icon flag_class" ng-style="{'background-image': 'url(https://raw.githubusercontent.com/hjnilsson/country-flags/master/png100px/'+'{{collection.country_code}}'+'.png)'}"></div>
                 {{ collection.country }}</a>
         </li>
 </div>
@@ -295,10 +295,20 @@
       }
     });
   });
-</script>
-<style>
+  app.directive('parseStyle', function()
+  {
+      return function(scope, elem)
+      {
+          elem.html(scope.$eval('\'' + elem.html() + '\''));
+      };
+  });
 
-</style>
+</script>
+ <style>
+.flag-icon{
+  margin-bottom:10px;
+}
+</style> 
 
 
 
