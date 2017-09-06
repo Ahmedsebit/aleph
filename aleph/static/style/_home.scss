@@ -20,6 +20,17 @@ $darker-grey: #213c4f;
     font-weight: bold;
   }
 
+  .open{
+      font-size:1.2em;
+      font-weight: 100;
+    }
+  
+    .gazette{
+    font-size:1.2em;
+    font-weight: 400;
+  }
+
+
   p.teaser {
     // text-transform: uppercase;
     font-size: 2em;
@@ -39,6 +50,21 @@ $darker-grey: #213c4f;
     font-weight: bold;
     text-align: center;
   }
+
+  .context-info {
+    margin-top: .7em;
+    font-size: 1em;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  .page_section_info{
+      font-weight: 700; 
+      color: rgba(0,0,0,0.6); 
+      font-size: 1.2rem; 
+      text-transform: initial
+  }
+
   .flag-group {
     text-transform: capitalize;
     margin: 0 auto;
@@ -113,6 +139,9 @@ $darker-grey: #213c4f;
     .carousel-inner {
       height: 550px;
       width: inherit;
+      margin-top: 50px;
+      padding-bottom: -100px;
+      margin-bottom: -100px;
       .carousel-control {
         z-index: 5;
         &.right-ctrl {
@@ -127,6 +156,10 @@ $darker-grey: #213c4f;
   .dark-row, .dark-row i{
     background: $grey;
     color: #fff;
+  }
+
+  .row-home{
+    margin-bottom: 35px;
   }
   .row-dark{
     background-color: $maroon;
@@ -146,6 +179,9 @@ $darker-grey: #213c4f;
       font-size: 18px;
       font-weight: 600;
     }
+  }
+  .row-dark-m{
+    margin-top: 5px;
   }
 
 
