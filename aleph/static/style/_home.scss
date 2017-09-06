@@ -20,12 +20,12 @@ $darker-grey: #213c4f;
     font-weight: bold;
   }
 
-  .open{
+  .open {
     font-size:1.2em;
     font-weight: 100;
     }
   
-  .gazette{
+  .gazette {
     font-size:1.2em;
     font-weight: 400;
   }
@@ -57,7 +57,7 @@ $darker-grey: #213c4f;
     text-align: center;
   }
 
-  .page_section_info{
+  .page_section_info {
     font-weight: 700; 
     color: rgba(0,0,0,0.6); 
     font-size: 1.2rem; 
@@ -84,7 +84,7 @@ $darker-grey: #213c4f;
       background-position: center;
       box-shadow: 0 0 4px rgba(0,0,0,0.2);
     }
-    .flag-icon{
+    .flag-icon {
       margin-bottom:10px;
     }
     .space {
@@ -152,15 +152,15 @@ $darker-grey: #213c4f;
 
   }
 
-  .dark-row, .dark-row i{
+  .dark-row, .dark-row i {
     background: $grey;
     color: #fff;
   }
 
-  .row-home{
+  .row-home {
     margin-bottom: 35px;
   }
-  .row-dark{
+  .row-dark {
     background-color: $maroon;
     color: #fff;
     font-size: 17px;
@@ -179,7 +179,7 @@ $darker-grey: #213c4f;
       font-weight: 600;
     }
   }
-  .row-dark-m{
+  .row-dark-m {
     margin-top: 5px;
   }
 
@@ -229,7 +229,7 @@ $darker-grey: #213c4f;
         right: 0;
       }
     }
-    .carousel-indicators li{
+    .carousel-indicators li {
       border: 1px solid $darker-grey;
     }
 
@@ -266,7 +266,7 @@ $darker-grey: #213c4f;
         font-size: 1.1em;
         word-wrap: break-word;
       }
-      p{
+      p {
         padding: 5px 10px 0 10px;
       }
       .date {
@@ -302,7 +302,7 @@ footer {
       white-space: nowrap;
       margin-left: 40px;
     }
-    a{
+    a {
       color: #000;
       text-decoration: none;
       &:hover {
