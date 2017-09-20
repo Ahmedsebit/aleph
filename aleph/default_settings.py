@@ -184,6 +184,48 @@ COLLECTION_CATEGORIES = {
 }
 
 
+# COUNTRIES dictionary for country-collection object with collection details
+
+COUNTRIES_LIST = [
+    {
+        "category": "gazette",
+        "private": False,
+        "summary": None,
+        "creator_id": None,
+        "label": "Kenyan Government Gazettes",
+        "foreign_id": "KE_gazettes",
+        "managed": False
+    },
+    {
+        "category": "gazette",
+        "private": False,
+        "summary": None,
+        "creator_id": None,
+        "label": "Senegal Government Gazettes",
+        "foreign_id": "SN_gazettes",
+        "managed": False
+    },
+    {
+        "category": "gazette",
+        "private": False,
+        "summary": None,
+        "creator_id": None,
+        "label": "Nigerian Government Gazettes",
+        "foreign_id": "NG_gazettes",
+        "managed": False
+    },
+    {
+        "category": "gazette",
+        "private": False,
+        "summary": None,
+        "creator_id": None,
+        "label": "Sierra Leone Government Gazettes",
+        "foreign_id": "SL_gazettes",
+        "managed": False
+    }
+]
+
+
 ##############################################################################
 # E-mail settings
 

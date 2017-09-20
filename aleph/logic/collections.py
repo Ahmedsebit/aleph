@@ -14,7 +14,13 @@ log = logging.getLogger(__name__)
 
 def update_collection(collection):
     """Create or update a collection."""
-    pass
+    exists = db.session.query(
+        db.session.query(Collection).filter_by(
+            foreign_id=collection.get("foreign_id")
+            ).exists()).scalar()
+    if exists is None:
+        Collection.create(collection, None)
+        db.session.commit()
 
 
 @celery.task()
