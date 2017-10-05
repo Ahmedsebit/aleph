@@ -8,12 +8,17 @@ from aleph.analyze import analyze_documents
 from aleph.logic.entities import delete_entity
 from aleph.logic.entities import update_entity_full
 from aleph.logic.documents import delete_document
+from aleph.default_settings import COUNTRIES_LIST
 
 log = logging.getLogger(__name__)
 
 
 def update_collection(collection):
     """Create or update a collection."""
+    collection["private"] = False
+    collection["summary"] = None
+    collection["creator_id"] = None
+    collection["managed"] = False
     exists = db.session.query(
         db.session.query(Collection).filter_by(
             foreign_id=collection.get("foreign_id")
@@ -21,6 +26,12 @@ def update_collection(collection):
     if exists is None:
         Collection.create(collection, None)
         db.session.commit()
+
+
+def create_collections():
+    """Create all the collections."""
+    for country in COUNTRIES_LIST:
+        update_collection(country)
 
 
 @celery.task()
