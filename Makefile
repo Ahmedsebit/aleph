@@ -11,7 +11,7 @@ upgrade: build
 	$(DEVDOCKER) aleph installdata
 
 web:
-	docker-compose -f docker-compose.dev.yml run --rm -p 5000:5000 app \
+	docker-compose -f docker-compose.dev.yml run -e CUSTOM_SCSS_PATH=aleph/static/style/_custom.scss  --rm -p 5000:5000 app \
 		/aleph/contrib/devwrapper.sh python aleph/manage.py runserver -h 0.0.0.0
 
 worker:
